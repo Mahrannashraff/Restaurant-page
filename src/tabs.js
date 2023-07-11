@@ -4,11 +4,12 @@ import createContactUS from "./contact";
 
 const createTabs = () => {
     const content = document.querySelector('#content');
+    const tabsDiv = document.createElement('div');
     const div1 = document.createElement('div');
     const div2 = document.createElement('div');
     const div3 = document.createElement('div');
 
-    
+    tabsDiv.classList.add('tabs');
     div1.classList.add('tab');
     div2.classList.add('tab');
     div3.classList.add('tab')
@@ -17,10 +18,12 @@ const createTabs = () => {
     div2.textContent = "Menu";
     div3.textContent = "Contact Us";
 
-    content.appendChild(div1);
-    content.appendChild(div2);
-    content.appendChild(div3);
+    tabsDiv.appendChild(div1);
+    tabsDiv.appendChild(div2);
+    tabsDiv.appendChild(div3);
 
+    content.appendChild(tabsDiv);
+    
     div1.addEventListener('click', () => {
         clearContent();
         createRestaurantHomePage();

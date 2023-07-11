@@ -5,7 +5,7 @@ const createContactUS = () => {
     
     //create a form 
     const form = document.createElement('from');
-    form.classList.add('contact-from');
+    form.classList.add('contact-form');
 
     const label1 = document.createElement('label');
     const input1 = document.createElement('input');
@@ -25,7 +25,7 @@ const createContactUS = () => {
 
     const submitButton = document.createElement('button');
     submitButton.type = "submit";
-    submitButton.value = "Submit";
+    submitButton.value = "submit";
     form.appendChild(submitButton);
 
     page.appendChild(form);
